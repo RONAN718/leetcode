@@ -1,11 +1,11 @@
-/*
+
 106. 从中序与后序遍历序列构造二叉树
 思路
 后序可以确定根节点  左右根
 中序可以用来区分左右子树的范围 左根右
 先通过后序找到根节点 然后在中序中区分左右子树再分别做递归构成树
-*/
 
+```java
 class Solution {
     //声明两个用来存储后序和中序的数组
     private int[] postorder_;
@@ -33,9 +33,9 @@ class Solution {
         return root;
     }
 }
+```
 
 
-/*
 210. 课程表 II
 思路
 使用BFS +拓扑排序来找合适的课程表
@@ -43,14 +43,13 @@ class Solution {
 1.生成邻接表和入度数组
 2.使用拓扑排序维护一个双端队列
 3.如果完成学习的课程数等于总课程数 返回结果否则返回空数组
-*/
 
+```java
 class Solution {
     //声明邻接表和入度数组和总课程数
     private List<List<Integer>> edges;
     private int[] indegrees;
     int n;
-
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         //邻接表和入度数组和总课程数赋初始值
         n=numCourses;
@@ -107,3 +106,4 @@ class Solution {
         indegrees[x]++;
     }
 }
+```
